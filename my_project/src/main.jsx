@@ -7,6 +7,8 @@ import NotFound from './component/NotFound.jsx'
 import Home from './component/Home.jsx';
 import About from './component/About.jsx';
 import Contact from './component/Contact.jsx';
+import Products from './component/Products.jsx';
+import ProductDetail from './component/ProductDetail.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -16,9 +18,11 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
